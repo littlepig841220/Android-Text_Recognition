@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/image_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitStart"
+        app:layout_constraintTop_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <TextView
+        android:id="@+id/text_display"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/capture_Image"
+        android:maxLines="5"
+        android:text="Display Detected Text from picture"
+        android:textSize="26dp" />
+
+    <Button
+        android:id="@+id/capture_Image"
+        android:text="capture image"
+        android:layout_width="0dp"
+        android:layout_height="55dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/detect_text_Image"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+    <Button
+        android:id="@+id/detect_text_Image"
+        android:layout_width="0dp"
+        android:text="Detect Text"
+        android:layout_height="55dp"
+        app:layout_constraintLeft_toRightOf="@+id/capture_Image"
+        app:layout_constraintRight_toLeftOf="@+id/detect_text_Image_online"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+    <Button
+        android:id="@+id/detect_text_Image_online"
+        android:layout_width="0dp"
+        android:text="Detect Text(online)"
+        android:layout_height="55dp"
+        app:layout_constraintLeft_toRightOf="@+id/detect_text_Image"
+        app:layout_constraintRight_toLeftOf="@id/button_run_custom_model"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+    <Button
+        android:id="@+id/button_run_custom_model"
+        android:text="No funtion"
+        android:layout_width="0dp"
+        android:layout_height="55dp"
+        app:layout_constraintLeft_toRightOf="@+id/detect_text_Image_online"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
